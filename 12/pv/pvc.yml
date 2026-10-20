@@ -1,0 +1,15 @@
+---
+# PVC : pvc.yml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-web
+spec:
+  accessModes:
+    - ReadWriteOnce
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 2Gi
+  storageClassName: manual
+
